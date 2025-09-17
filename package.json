@@ -1,0 +1,26 @@
+{
+  "name": "ract_node_mini_projects",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kishor-Mane-26/Node_React_Mini_Projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kishor-Mane-26/Node_React_Mini_Projects/issues"
+  },
+  "homepage": "https://github.com/Kishor-Mane-26/Node_React_Mini_Projects#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.0",
+    "nodemon": "^3.1.10"
+  }
+}
