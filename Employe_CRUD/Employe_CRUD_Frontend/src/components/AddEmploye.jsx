@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import ReactDOM from "react-dom";
+import Swal from "sweetalert2";
 import APIservice from "../service/APIservice";
 
 export default class  AddEmp extends Component{
@@ -19,7 +20,16 @@ export default class  AddEmp extends Component{
     saveEmploye = (e) => {
         let promise = APIservice.saveEmploye(this.state);
         promise.then((res)=>{
-            alert("Data added sucesfully...");
+            Swal.fire({
+                title: "Success!",
+                text: "Your data has been saved.",
+                icon: "success",
+                confirmButtonText: "OK",
+            }).then((res)=>{
+                window.location.reload();
+            }).catch((err)=>{
+                console.log(`Error is {err}`);
+            })
         }).catch((err)=>{
             alert("Data insertion failure...");
             console.log("Error is "+err);
@@ -41,7 +51,7 @@ export default class  AddEmp extends Component{
                         <input type="text" className="form-control" name="contact" placeholder="Enter Employee's Contact" value={this.state.contact} onChange={(e)=>{this.unHandler(e)}} />
                     </div>
 
-                    <button type="submit" className="btn btn-primary w-100" onClick={this.saveEmploye}>Submit</button>
+                    <button type="button" className="btn btn-primary w-100" onClick={this.saveEmploye}>Submit</button>
                 </form>
             </div>
 

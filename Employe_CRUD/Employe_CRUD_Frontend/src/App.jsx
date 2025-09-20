@@ -21,6 +21,7 @@ export default class App extends Component{
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/saveemp" element={<AddEmp/>}></Route>
+          <Route path="/update" element={<AddEmp/>}></Route>
           <Route path="/viewemp" element={<ViewEmp/>}></Route>
         </Routes>
       </BrowserRouter>
